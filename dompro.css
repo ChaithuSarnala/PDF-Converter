@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* position: relative; */
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+}
+.sec1{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+
+.input_form {
+    width: 50%;
+    background-color:  rgb(229, 175, 136);
+    color:#421502;
+    line-height: 20px;
+    padding: 30px 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    
+}
+.form-control{
+    width:250px;
+    height:20px;
+}
+.btn{
+    border-radius:30px;
+    background-color: #ee7039;
+    border:none;
+    width:100px;
+    
+   
+    
+}
+
+/* INVOICE STYLING */
+
+.invoice-container {
+    width: 100%;
+    height:100%;
+    background-color: rgb(229, 175, 136);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sec2{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    padding-top: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+}
+.first{
+    width:100%;
+   
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.address {
+    font-size: 12px;
+    line-height: 2px;
+}
+
+.bill {
+    width:150px;
+    height:100px;
+    line-height: 10px;
+    font-size: 12px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+.bill .i1{
+    height:20px;
+    display:flex;
+    flex-direction: column;
+    gap:0px;
+  
+    
+}
+
+.my_items {
+    padding-left: 80px;
+    padding-top: 50px;
+    width: 100%;
+    width: calc(100% - 20px);
+   
+    background-color: rgb(229, 175, 136);
+    
+}
+.my_item{
+    
+    padding-left: 10px;
+    width: 100%;
+    width: calc(100% - 20px);
+}
+
+
+.table th,
+.table td {
+    width:200px;
+}
+#td1 input {
+    width:200px;
+}
+#td2 input{
+    width:200px;
+} 
+#td3 input{
+    width:200px;
+} 
+#td4 input{
+    width:200px;
+} 
+#td5 input{
+    width:200px;
+}
+.dbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+#download button{
+    border-color: #ee7039;
+    border-radius: 10px;
+   color:aliceblue;
+   background-color: #1f140f;
+   font-size: 15px;
+   width:120px;
+  }
+  
+
+
+
+
