@@ -5,7 +5,6 @@
 }
 
 body {
-    /* position: relative; */
     background-color: #f8f8f8;
     font-family: Arial, sans-serif;
 }
@@ -69,48 +68,66 @@ h1 {
     font-weight: 700;
 }
 
-.logo img {
-    width: 150px;
-    height: 150px;
-}
-.first{
-    width:100%;
-   
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.address {
-    font-size: 12px;
-    line-height: 2px;
+
+
+.first {
+    display: flex;
+    justify-content:center; 
+    align-items: center; 
+    gap: 50px;
 }
 
+.logo img {
+    width: 200px; 
+    height: 200px;}
+
+.address {
+    font-size: 14px;
+    line-height: 1;
+    padding-top: 20px;
+}
+
+
+
+
 .bill {
-    width:150px;
-    height:100px;
-    line-height: 10px;
+    width: 150px;
+    height: auto;
     font-size: 12px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: column; */
-}
-.bill .i1{
-    height:20px;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    gap:0px;
-  
-    
+    gap: 10px; 
 }
+
+.bill .i1 {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.bill .i1 p {
+    margin: 0;
+}
+
+.bill .i1 p:first-child {
+    width: 100px; 
+    font-weight: bold; 
+}
+
+.bill .i1 p:last-child {
+    width: auto;
+    padding-left: 10px;
+    font-style: italic; 
+}
+
+
 
 .my_items {
     padding-left: 80px;
     padding-top: 50px;
     width: 100%;
     width: calc(100% - 20px);
-   
-    background-color: rgb(229, 175, 136);
+   background-color: rgb(229, 175, 136);
     
 }
 .my_item{
