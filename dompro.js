@@ -67,7 +67,7 @@ form.addEventListener("submit", (e) => {
     const GSTpurchased = GST.value;
 
     const item_input = document.createElement("input");
-    item_input.classList.add("text");
+    item_input.classList.add("item_input");
     item_input.value = itempurchased;
     item_input.type = "text";
     item_input.style.color = "black";
@@ -79,7 +79,7 @@ form.addEventListener("submit", (e) => {
 
 
     const quantity_input = document.createElement("input");
-    quantity_input.classList.add("text");
+    quantity_input.classList.add("Quantity_input");
     quantity_input.value = quantitypurchased;
     quantity_input.type = "text";
     quantity_input.style.color = "black";
@@ -91,7 +91,7 @@ form.addEventListener("submit", (e) => {
 
 
     const price_input = document.createElement("input");
-    price_input.classList.add("text");
+    price_input.classList.add("price_input");
     price_input.value = pricepurchased;
     price_input.type = "text";
     price_input.style.color = "black";
@@ -103,7 +103,7 @@ form.addEventListener("submit", (e) => {
 
 
     const GST_input = document.createElement("input");
-    GST_input.classList.add("text");
+    GST_input.classList.add("GST_input");
     GST_input.value = GSTpurchased;
     GST_input.type = "text";
     GST_input.style.color = "black";
@@ -137,21 +137,25 @@ form.addEventListener("submit", (e) => {
     updateTotalAmount();
 });
 
-function updateTotalAmount() {
 
+function updateTotalAmount() {
     const totalprices = document.querySelectorAll('.totalpc');
     const sum = Array.from(totalprices).reduce((total, input) => {
         return total + parseFloat(input.value);
     }, 0);
-    
-    console.log(sum);
-    const tax = 75;
-    const finalAmount = sum + tax;
+
+    const gstInputs = document.querySelectorAll('.GST_input');
+    const totalGST = Array.from(gstInputs).reduce((total, input) => {
+        return total + parseFloat(input.value);
+    }, 0);
+
+    const finalAmount = sum + totalGST;
 
     ta.textContent = sum;
-    tx.textContent = tax;
+    tx.textContent = totalGST;
     fp.textContent = finalAmount;
 }
+
 
 dwn.addEventListener('click', () => {
 
@@ -164,29 +168,6 @@ dwn.addEventListener('click', () => {
         para.textContent = input.value;
         input.parentNode.replaceChild(para, input);
     });
-
-
-    // var opt = {
-    //     margin: 1,
-    //     filename: 'invoice.pdf',
-    //     image: { type: 'png', quality: 0.98 },
-    //     html2canvas: { scale: 2 },
-    //     jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' }
-    // };
-
-
-    // html2pdf().from(clone).set(opt).save();
-
-// document.getElementByClass('.downbtn').addEventListener('click', () => {
-//     const inpdf = document.getElementByClass('.invoice-container');
-//     const clone = inpdf.cloneNode(true);
-
-//     const inputs = clone.querySelectorAll('input');
-//     inputs.forEach(input => {
-//         const para = document.createElement('p');
-//         para.textContent = input.value;
-//         input.parentNode.replaceChild(para, input);
-//     });
 
     const opt = {
         margin: [0.5, 0.5, 0.5, 0.5],
